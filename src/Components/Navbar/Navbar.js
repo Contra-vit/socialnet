@@ -8,15 +8,15 @@ const Navbar = () => {
                 <a className= {C.item} href='/profile'> Profile </a>
             </div>
             <div>
-                <a className={C.item} href='/profile'> Message </a>
+                <a className={C.item} href='/message'> Message </a>
             </div>
             <div >
-                <a className={C.item} href='/profile'>News </a>
+                <a className={C.item} href='/news'>News </a>
             </div>
             <div >
-                <a className={C.item} href='/profile'>Music </a>
+                <a className={C.item} href='/music'>Music </a>
             </div>
-            <div > <a className={C.item} href='/profile'> Settings </a>
+            <div > <a className={C.item} href='/settings'> Settings </a>
             </div>
         </nav>
 
