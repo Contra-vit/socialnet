@@ -1,8 +1,26 @@
 .nav {
     grid-area: n;
     background-color: rgb(130, 211, 174);
-  
+    padding: 30px;
+
   }
-  .item {
+  .item a   {
     color: white;
+    text-decoration: none;
+
   }
+
+  /* .item a:active {
+    color: rgb(133, 34, 95);
+  } */
+ /* .item a.active {
+  color: purple; 
+ } */
+/* 
+
+ .item  a:visited {
+  color: rgb(176, 26, 26);
+  text-decoration: none;
+  display: block; } */
+
+  

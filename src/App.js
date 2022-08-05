@@ -1,5 +1,5 @@
 import a from './App.module.css';
-import Dialog from './Components/Dialogs/Dialog';
+import Dialogs from './Components/Dialogs/Dialogs';
 import Header from './Components/Header/Header';
 import Navbar from './Components/Navbar/Navbar';
 import Profile from './Components/Profile/Profile';
@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path='/profile' element={<Profile />} />
-          <Route exact path='/message' element={<Dialog />} />
+          <Route  path='/dialogs' element={<Dialogs />} />
         </Routes>
       </div>
     </Router>
