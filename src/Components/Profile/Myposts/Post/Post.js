@@ -19,6 +19,7 @@ const Post = (props) => {
                     {props.message}
                     <div>
                         <span onClick={likeCount}>Like
+                        
                             <div ref={inner} ></div>
                         </span>
                     </div>

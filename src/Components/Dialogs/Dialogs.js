@@ -7,33 +7,32 @@ const Dialog = (props)=>{
         <div className ={b.dialog + '' + b.active }>
              <Link to={'/dialogs/' + props.id}>{props.name}</Link> 
              </div>
-
     )
-
-
     }
 
+const Message = (props) => {
+    return (
+        <div className ={b.message}>{props.message}</div>
+    )
+}
 
 
 const Dialogs = (props) => {
-    
-
     return (
             <div className={b.dialogs} >
 
                 <div className ={b.dialogItem}>
                     <Dialog name= 'Mike' id= '1'/>
-
-                    <div className ={b.dialog}><NavLink to='/dialogs/2'>Kevin</NavLink></div>
-                    <div className ={b.dialog}><Link to='/dialogs/3'> David</Link></div>
-                    <div className ={b.dialog}><Link to='/dialogs/4'> Jack</Link></div>
+                    <Dialog name= 'John' id= '3'/>
+                    <Dialog name= 'Adam' id= '4'/>
+                    <Dialog name= 'Piter' id= '5'/>
                 </div>
 
                 <div className ={b.messages}  >
-                    <div className ={b.message}>Hi</div>
-                    <div className ={b.message}>What's up?</div>
-                    <div className ={b.message}>Bussy</div>
-                    <div className ={b.message}>Goodbuy</div>
+                    <Message message= 'How'/>
+                    <Message message= 'what is good'/>
+                    <Message message= 'Ku-ku'/>
+                    <Message message= 'Google'/>
                 </div>
 
 
