@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path='/profile' element={<Profile />} />
-          <Route  path='/dialogs' element={<Dialogs />} />
+          <Route path='/dialogs' element={<Dialogs />} />
         </Routes>
       </div>
     </Router>

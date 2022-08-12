@@ -24,7 +24,8 @@ const Myposts = () => {
         {id:3, post: 'You gotta see it', likesCount:10},
         {id:4, post: 'Have a nice flight', likesCount:7}
     ]
-
+    let post = postsData.map(el => <Post message={ el.post} likesCount = {el.likesCount} />
+)
     return (
         <div className={b.postBlock}>
 
@@ -47,10 +48,9 @@ const Myposts = () => {
             </div>
             <div className={b.posts} >
 
-                <Post message={ postsData[0].post} likesCount = {postsData[0].likesCount} />
-                <Post message={ postsData[1].post} likesCount = {postsData[1].likesCount}/>
-                <Post message={ postsData[2].post} likesCount = {postsData[1].likesCount}/>
-                <Post message={ postsData[3].post} likesCount = {postsData[1].likesCount}/>
+                {post }
+               
+                
                 <div>
                     {
                         
