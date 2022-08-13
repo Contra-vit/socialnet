@@ -2,7 +2,8 @@ import React from 'react';
 import b from './Myposts.module.css'
 import Post from './Post';
 
-const Myposts = () => {
+const Myposts = (props) => {
+    
     let textarea = React.createRef();
     // let textPost = React.createRef();
 
@@ -18,17 +19,12 @@ const Myposts = () => {
     }
     console.log('hi')
 
-    let postsData  = [
-        {id:1, post: 'How', likesCount:12},
-        {id:2, post: 'I loose my mind', likesCount:12},
-        {id:3, post: 'You gotta see it', likesCount:10},
-        {id:4, post: 'Have a nice flight', likesCount:7}
-    ]
-    let post = postsData.map(el => <Post message={ el.post} likesCount = {el.likesCount} />
+
+        
+    let post = props.dataProfilePost.map(el => <Post message={ el.post} likesCount = {el.likesCount} />
 )
     return (
         <div className={b.postBlock}>
-
             <div >
                 <h3>My posts</h3>
                 <div>
@@ -41,26 +37,14 @@ const Myposts = () => {
                        
                             <button className={b.buttonRemove}>Remove</button>
                         </div>
-
                     </div>
-
                 </div>
             </div>
             <div className={b.posts} >
-
                 {post }
-               
-                
                 <div>
-                    {
-                        
-                        
-                        
-                    }
                     <button onClick={check}> Function </button>
                 </div>
-
-
             </div>
         </div>
 
