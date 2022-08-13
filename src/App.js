@@ -13,8 +13,8 @@ function App(props) {
         <Header />
         <Navbar />
         <Routes>
-          <Route exact path='/profile' element={<Profile dataAppPost = {props.dataIndexPosts} />} />
-          <Route path='/dialogs' element ={ <Dialogs dataAdd= {props.dataIndexDialog} dataAppMessage = {props.dataIndexMessage}   />} />
+          <Route exact path='/profile' element={<Profile dataAppPost = {props.dataIndexPosts.postsData} />} />
+          <Route path='/dialogs' element ={ <Dialogs dataAdd= {props.dataIndexDialog.dialogsData} dataAppMessage = {props.dataIndexMessage.messagersData}   />} />
         </Routes>
       </div>
     </Router>
