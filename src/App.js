@@ -6,15 +6,20 @@ import Profile from './Components/Profile/Profile';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App(props) {
-    
+  
   return (
     <Router>
       <div className={a.app_wrapper}>
         <Header />
         <Navbar />
         <Routes>
-          <Route exact path='/profile' element={<Profile dataAppPost = {props.dataIndexPosts.postsData} />} />
-          <Route path='/dialogs' element ={ <Dialogs dataAdd= {props.dataIndexDialog.dialogsData} dataAppMessage = {props.dataIndexMessage.messagersData}   />} />
+          <Route exact path='/profile' element={<Profile 
+          dataState = {props.dataState}  
+          addPost={props.addPost} 
+          updateNewPost= {props.updateNewPost}
+          />} />
+          <Route path='/dialogs' element ={ <Dialogs 
+          dataState= {props.dataState}/>} />
         </Routes>
       </div>
     </Router>

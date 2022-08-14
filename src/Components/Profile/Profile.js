@@ -8,7 +8,10 @@ const Profile = (props) => {
     return (
         <div className={b.content}>
             <ProfileInfo />
-            <Myposts dataProfilePost = {props.dataAppPost}/>
+            <Myposts 
+            dataState = {props.dataState} 
+            addPost={props.addPost}  
+            updateNewPost = {props.updateNewPost}/>
         </div>
 
     )

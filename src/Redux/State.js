@@ -1,5 +1,14 @@
+import {renderEntireTree} from '../render';
 
 let State = {
+     profilePage: {
+        postsData: [
+            { id: 1, post: 'How', likesCount: 12 },
+            { id: 2, post: 'I loose my mind', likesCount: 12 },
+            { id: 3, post: 'You gotta see it', likesCount: 10 },
+            { id: 4, post: 'Have a nice flight', likesCount: 7 }],
+        newPostText: 'it-camasutra'
+    },
     dialogPage: {
         dialogsData: [
             { id: 1, name: 'Mike' },
@@ -11,14 +20,25 @@ let State = {
             { id: 2, message: 'what is good' },
             { id: 3, message: 'Ku-ku' },
             { id: 4, message: 'Google, Peter' }]
-    },
-
-    profilePage: {
-        postsData: [
-            { id: 1, post: 'How', likesCount: 12 },
-            { id: 2, post: 'I loose my mind', likesCount: 12 },
-            { id: 3, post: 'You gotta see it', likesCount: 10 },
-            { id: 4, post: 'Have a nice flight', likesCount: 7 }]
     }
+
+   
 }
+export let addPost = (postMessage) => {
+    let newPost = {
+        di:5, 
+        post: postMessage,
+        likesCount: 4
+    };
+
+    State.profilePage.postsData.push(newPost)
+    renderEntireTree(State);
+}
+
+export let updateNewPost = (newText) => {
+    State.profilePage.newPostText =newText;
+    renderEntireTree(State);
+}
+
+
 export default State;

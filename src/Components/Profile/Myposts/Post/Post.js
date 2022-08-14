@@ -19,7 +19,7 @@ const Post = (props) => {
                     {props.message}
                     <div>
                         <span onClick={likeCount} className=".material-symbols-outlined">
-                            <span class="material-symbols-outlined">
+                            <span className="material-symbols-outlined">
                                 thumb_up
                             </span>
                             {props.likeCount}
