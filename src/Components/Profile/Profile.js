@@ -8,13 +8,15 @@ const Profile = (props) => {
     return (
         <div className={b.content}>
             <ProfileInfo />
-            <Myposts 
-            dataState = {props.dataState} 
-            addPost={props.addPost}  
-            updateNewPost = {props.updateNewPost}/>
+            <Myposts
+                posts={props.profilePage.posts}
+                newPostText={props.profilePage.newPostText}
+                addPost={props.addPost}
+                updateNewPost={props.updateNewPost} />
         </div>
 
     )
 }
 
 export default Profile;
+

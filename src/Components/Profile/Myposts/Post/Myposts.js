@@ -3,20 +3,20 @@ import b from './Myposts.module.css'
 import Post from './Post';
 
 const Myposts = (props) => {
+
     let post = 
-    props.dataState.profilePage.postsData.map(el => <Post  message={ el.post} likesCount = {el.likesCount} />
+    props.posts.map(el => <Post  message={ el.post} likesCount = {el.likesCount} />
 )
  let newPostElement = React.createRef();
 
-function addPost() {
-        let text  = newPostElement.current.value;
-        props.addPost(text)
+function addPostIn() {
+        // let text  = newPostElement.current.value;
+        props.addPost()
     } 
 let onPostChange = () =>{
     let text  = newPostElement.current.value;
     props.updateNewPost(text);
 }
-
 
     return (
         <div className={b.postBlock}>
@@ -24,11 +24,15 @@ let onPostChange = () =>{
                 <h3>My posts</h3>
                 <div>
                     <div>
-                        <textarea cols="30" rows="10" ref={newPostElement} onChange = {onPostChange} value={props.dataState.profilePage.newPostText} />
+                        <textarea 
+                        cols="30" rows="10"
+                        ref={newPostElement} 
+                        onChange = {onPostChange} 
+                        value={props.newPostText} />
                     </div>
                     <div className={b.buttons}>
                         <div>
-                            <button onClick={addPost}>Add post</button>
+                            <button onClick={addPostIn}>Add post</button>
                        
                             <button className={b.buttonRemove}>Remove</button>
                         </div>
