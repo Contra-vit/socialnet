@@ -16,7 +16,7 @@ import { addPost, updateNewPost } from './Redux/State';
         updateNewPost={updateNewPost}
       />
     </React.StrictMode>
-  );
+  ); 
 }
 
 

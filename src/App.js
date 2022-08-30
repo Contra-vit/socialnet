@@ -19,10 +19,10 @@ function App(props) {
               updateNewPost={props.updateNewPost}
             />} />
           <Route path='/dialogs' element={<Dialogs
-            dataState={props.dataState} />} />
+            dataState={props.state} />} />
         </Routes>
       </div>
-    </Router>
+    </Router> 
   );
 }
 

@@ -20,9 +20,7 @@ function Dialogs(props) {
                     <textarea cols="40" rows="5"></textarea>
                     <div>
                         <button>Send</button>
-
                     </div>
-
                 </div>
             </div>
 

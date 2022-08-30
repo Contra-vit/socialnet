@@ -45,5 +45,5 @@ export let updateNewPost = (newText) => {
     renderEntireTree(state);
 }
 
-
+ 
 export default state;
